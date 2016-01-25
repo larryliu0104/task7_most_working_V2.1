@@ -1,0 +1,19 @@
+.ua-link-textfill {
+  padding: 0.3em 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  text-shadow: none; }
+  .ua-link-textfill::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0.3em 0;
+    max-width: 0;
+    border-bottom: 2px solid #000;
+    color: #000;
+    content: attr(data-hover);
+    transition: max-width 0.5s; }
+  .ua-link-textfill:hover::before, .ua-link-textfill:focus::before {
+    max-width: 100%; }
+
+/*# sourceMappingURL=dongxiao.css.map */

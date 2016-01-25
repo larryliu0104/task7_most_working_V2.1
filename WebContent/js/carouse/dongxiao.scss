@@ -1,0 +1,23 @@
+$ua-link-textfill-color: #000;
+.ua-link-textfill{
+	padding: 0.3em 0;
+	border-top: 2px solid rgba(0,0,0,0.2);
+	text-shadow: none;
+	&::before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+		padding: 0.3em 0;
+		max-width: 0;
+		border-bottom: 2px solid $ua-link-textfill-color;
+		color: $ua-link-textfill-color;
+		content: attr(data-hover);
+		transition: max-width 0.5s;	
+	}
+	&:hover,&:focus{
+		&::before{
+			max-width: 100%;
+		}
+	}
+}
