@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Blossom Mutual Funds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+<!--script src="js/less-1.3.3.min.js"></script-->
+<!--append â#!watchâ to the browser URL, then refresh the page. -->
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+    background-color: #51626f;
+    /* rgb(35, 31, 32) */
+    color: #51626f;
+}
+
+h1, h2, h3, h4 {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: normal;
+}
+
+.whitefont {
+    color: white;
+}
+
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu
+    {
+    margin-top: 0;
+}
+
+.navbar .sub-menu:before {
+    border-bottom: 7px solid transparent;
+    border-left: none;
+    border-right: 7px solid rgba(0, 0, 0, 0.2);
+    border-top: 7px solid transparent;
+    left: -7px;
+    top: 10px;
+}
+
+.navbar .sub-menu:after {
+    border-top: 6px solid transparent;
+    border-left: none;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    left: 10px;
+    top: 11px;
+    left: -6px;
+}
+</style>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-1 column"></div>
+                    <div class="col-md-10 column">
+                        <div class="row clearfix">
+                            <div class="col-md-6 column whitefont"
+                                style="margin-top: 50px; font-weight: 900; font-size: 18px;">
+                                T3 Mutual Funds Management Platform</div>
+                            <div class="col-md-6 column whitefont"
+                                style="text-align: right; margin-top: 60px">
+                                <c:if test="${employee !=null}">
+                                Welcome, ${employee.getUserName()}! &nbsp;
+                                <a type="button" href="logout.do" class="btn btn-primary btn-sm"
+                                        role="button">Logout</a>
+                                </c:if>
+                            </div>
+                        </div>
+                        <br>
+                        <nav class="">
+                            <div class="container-fluid">
+
+                                <div class="navbar navbar-fixed-top">
+                                    <div class="navbar-inner">
+                                        <div class="container-fluid">
+                                            <a data-target=".nav-collapse" data-toggle="collapse"
+                                                class="btn btn-navbar"> <span class="icon-bar"></span> <span
+                                                class="icon-bar"></span> <span class="icon-bar"></span>
+                                            </a> <a href="#" class="brand">Project name</a>
+                                            <div class="nav-collapse">
+                                                <ul class="nav">
+                                                    <li class="active"><a href="#">Home</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li><a href="#">Link</a></li>
+                                                    <li class="dropdown"><a data-toggle="dropdown"
+                                                        class="dropdown-toggle" href="#">Dropdown <b
+                                                            class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#">2-level Dropdown <i
+                                                                    class="icon-arrow-right"></i></a>
+                                                                <ul class="dropdown-menu sub-menu">
+                                                                    <li><a href="#">Action</a></li>
+                                                                    <li><a href="#">Another action</a></li>
+                                                                    <li><a href="#">Something else here</a></li>
+                                                                    <li class="divider"></li>
+                                                                    <li class="nav-header">Nav header</li>
+                                                                    <li><a href="#">Separated link</a></li>
+                                                                    <li><a href="#">One more separated link</a></li>
+                                                                </ul></li>
+                                                            <li><a href="#">Another action</a></li>
+                                                            <li><a href="#">Something else here</a></li>
+                                                            <li class="divider"></li>
+                                                            <li class="nav-header">Nav header</li>
+                                                            <li><a href="#">Separated link</a></li>
+                                                            <li><a href="#">One more separated link</a></li>
+                                                        </ul></li>
+                                                </ul>
+                                                <form action="" class="navbar-search pull-left">
+                                                    <input type="text" placeholder="Search"
+                                                        class="search-query span2">
+                                                </form>
+                                                <ul class="nav pull-right">
+                                                    <li><a href="#">Link</a></li>
+                                                    <li class="divider-vertical"></li>
+                                                    <li class="dropdown"><a class="#" href="#">Menu</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- /.nav-collapse -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <ul class="nav nav-pills">
+                                    <li class="active"><a href="#">Regular link</a></li>
+                                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                                        class="dropdown-toggle">Dropdown <b class="caret"></b></a>
+                                        <ul class="dropdown-menu" id="menu1">
+                                            <li><a href="#">2-level Menu <i
+                                                    class="icon-arrow-right"></i></a>
+                                                <ul class="dropdown-menu sub-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li class="nav-header">Nav header</li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                    <li><a href="#">One more separated link</a></li>
+                                                </ul></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul></li>
+                                </ul>
+
+
+                                <div class="btn-toolbar" role="toolbar" aria-label="...">
+
+
+                                    <div class="dropdown btn-group" role="group">
+                                        <button class="btn btn-default dropdown-toggle" type="button"
+                                            id="dropdownMenu1" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                            Manage Employee Account <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="employee_register.do">Create Employee
+                                                    Account</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="employee-change-pwd.do">Change Your
+                                                    password</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown btn-group" role="group">
+                                        <button class="btn btn-default dropdown-toggle" type="button"
+                                            id="dropdownMenu1" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                            Manage Customer Account <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="employee_create_customer.do">Create
+                                                    Customer Account</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="employee_search_customer.do">View
+                                                    Customer Account</a></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="dropdown btn-group" role="group">
+                                        <button class="btn btn-default dropdown-toggle" type="button"
+                                            id="dropdownMenu1" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                            Manage Fund Account <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="employee_create_fund.do">Create New
+                                                    Fund</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="employee-transition-day.do">Transition
+                                                    Day</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.container-fluid -->
+                        </nav>
+                        <div class="panel " style="margin-top: 10px; font: #51626f">
